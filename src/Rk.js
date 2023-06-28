@@ -1,0 +1,63 @@
+import React from "react";
+
+
+function Rk() {
+  const name = "Josh Perez";
+  const element = <h1>Hello, {name}</h1>;
+
+  function formatName(user) {
+    return user.firstName + " " + user.lastName;
+  }
+
+  const user = {
+    firstName: "Harper",
+    lastName: "Perez",
+    avatarUrl:
+      "data:image/jpeg;base64,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",
+  };
+  function getGreeting(user) {
+    if (user) {
+      return <h1>Hello, {formatName(user)}!</h1>;
+    }
+    return <h1>Hello, Stranger.</h1>;
+  }
+  const myStyle = {
+    // width:"300px",
+    // height:"100px",
+    // margin:"300px",
+    fontSize: "20px",
+  };
+  const element2 = <h1>Hello, {formatName(user)}!</h1>;
+  const element3 = <h1>Hello, {getGreeting(user)}!</h1>;
+  const element4 = <img src={user.avatarUrl} alt={formatName(user)} />;
+  const element5 = (
+    <a
+      href="https://www.reactjs.org"
+      style={myStyle}
+      className="btn btn-primary"
+    >
+      React Learn link
+    </a>
+  );
+  const myStyle2 = {
+    color: "blue",
+  };
+  const element6 = React.createElement(
+    "h1",
+    { className: "greeting", style: myStyle2 },
+    "Hello, world!"
+  );
+
+  return (
+    <div>
+      <div className="rk">{element}</div>
+      <div className="rk">{element2}</div>
+      <div className="rk">{element3}</div>
+      <div className="rk mt-5 ms-5 me-5 ps-5">{element4}</div>
+      <div className="rk mt-5 ms-5 me-5 ps-5">{element5}</div>
+      {element6}
+    </div>
+  );
+}
+
+export default Rk;
