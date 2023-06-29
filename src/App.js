@@ -1,13 +1,13 @@
 // import logo from "./logo.svg";
 import "./App.css";
 // import ColorPicker from "./components/ColorPicker";
-import About from "./components/About";
+// import About from "./components/About";
 import Navbar from "./components/Navbar";
 // import { Comment } from "./components/Comment";
 import TextForm from "./components/TextForm";
 import React, { useState } from "react";
 // import { BrowserRouter as Router, Routes, Route, Link,Switch } from "react-router-dom";
-import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 // import Profile from "./Profile";
 
 function App() {
@@ -33,7 +33,7 @@ function App() {
     console.log(newColor);
     document.body.style.backgroundColor = newColor.hex;
     setColor(newColor.hex);
-  };
+  }; 
 
   const [mode, setMode] = useState("light");
 
@@ -64,31 +64,31 @@ function App() {
   };
   return (
     <>
-      {/* <Navbar
+       <Navbar
         name="Navbar"
         aboutText="About Us"
         mode={mode}
         toggleModeButton={toggleModeButton}
         alert={alert}
         alertMessage={alertMessage}
-      /> */}
+      /> 
       {/* <Comment
         date={comment.date}
         text={comment.text}
         author={comment.author}
       /> */}
-      {/* <div className="mt-5">
+       <div className="mt-5">
         <TextForm
           heading="Enter your text which you want to convert"
           mode={mode}
           color={color}
           handleColorChange={handleColorChange}
         />
-      </div> */}
+      </div> 
 
       {/* <About /> */}
 
-      <Router>
+      {/* <Router>
         <Routes>
           <Route
             exact
@@ -131,7 +131,7 @@ function App() {
             }
           ></Route>
         </Routes>
-      </Router>
+      </Router> */}
     </>
   );
 }

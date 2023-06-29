@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 export default function Navbar(props) {
   return (
@@ -12,9 +12,9 @@ export default function Navbar(props) {
           props.mode === "dark" ? "dark" : "light"
         } bg-${props.mode === "dark" ? "dark" : "light"}`}
       >
-        <Link className="navbar-brand" to="/">
+        <a className="navbar-brand" href="/">
           {props.name}
-        </Link>
+        </a>
         <button
           className="navbar-toggler"
           type="button"
@@ -30,14 +30,14 @@ export default function Navbar(props) {
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
             <li className="nav-item active">
-              <Link className="nav-link ms-5" to="/">
+              <a className="nav-link ms-5" href="/">
                 Home <span className="sr-only">(current)</span>
-              </Link>
+              </a>
             </li>
             <li className="nav-item">
-              <Link className="nav-link ms-5" to="/about">
+              <a className="nav-link ms-5" href="/about">
                 {props.aboutText}
-              </Link>
+              </a>
             </li>
             <li className="nav-item dropdown">
               <a
@@ -105,8 +105,10 @@ export default function Navbar(props) {
           </div>
         </div>
       </nav>
+      <div style={{height:'50px'}}>
       <div className={`container alert alert-${props.alert} mt-5`} role="alert">
         {props.alertMessage}
+      </div>
       </div>
     </>
   );

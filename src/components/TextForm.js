@@ -144,13 +144,15 @@ export default function TextForm(props) {
     .filter((word) => word !== "").length;
   return (
     <>
-      <div className="container mt-5 mb-5 ">
+      <div className="container mt-5 mb-5">
         <ChromePicker color={props.color} onChange={props.handleColorChange} />
       </div>
-      <div className={`container alert alert-${alert}`} role="alert">
-        {alertMessage}
+      <div style={{ height: "50px" }}>
+        <div className={`container alert alert-${alert}`} role="alert">
+          {alertMessage}
+        </div>
       </div>
-      <div className="container text-light">
+      <div className="container text-light mt-5">
         <div className="mb-3">
           <h1 className={`text-${props.mode === "dark" ? "light" : "dark"}`}>
             {props.heading}
@@ -221,10 +223,10 @@ export default function TextForm(props) {
       >
         <h1>Your text summary:</h1>
         <span>
-          {wordCount} words {text.length} characters
+          {wordCount} words {text.replace(/\s/g, "").length} characters
         </span>
         <h1>Reading time it will take:</h1>
-        <span>{0.004 * text.split(" ").length}</span>
+        <span>{0.004 * wordCount}</span>
         <h1>Preview:</h1>
         <span>{text}</span>
       </div>
