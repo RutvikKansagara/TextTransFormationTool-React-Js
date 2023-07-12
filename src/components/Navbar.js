@@ -15,17 +15,17 @@ export default function Navbar(props) {
         <a className="navbar-brand" href="/">
           {props.name}
         </a>
-        <button
+         <button
           className="navbar-toggler"
           type="button"
-          data-toggle="collapse"
-          data-target="/navbarSupportedContent"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
           aria-controls="navbarSupportedContent"
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </button> 
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav mr-auto">
@@ -105,10 +105,13 @@ export default function Navbar(props) {
           </div>
         </div>
       </nav>
-      <div style={{height:'50px'}}>
-      <div className={`container alert alert-${props.alert} mt-5`} role="alert">
-        {props.alertMessage}
-      </div>
+      <div style={{ height: "50px" }}>
+        <div
+          className={`container alert alert-${props.alert} mt-5`}
+          role="alert"
+        >
+          {props.alertMessage}
+        </div>
       </div>
     </>
   );
